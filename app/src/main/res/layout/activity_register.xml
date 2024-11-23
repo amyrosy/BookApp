@@ -6,6 +6,13 @@
     android:padding="0dp"
     android:background="#c0c9d0">
 
+<!--<ImageView-->
+<!--    android:id="@+id/back_arrow"-->
+<!--    android:layout_width="50dp"-->
+<!--    android:layout_height="20dp"-->
+<!--    android:layout_marginTop="12dp"-->
+<!--    android:src="@drawable/left_arrow"/>-->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -90,6 +97,15 @@
                 android:textSize="16dp"
                 android:padding="5dp"
                 android:backgroundTint="@color/blue" />
+
+            <TextView
+                android:id="@+id/sign_in"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Already have an Account?  Sign in"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 

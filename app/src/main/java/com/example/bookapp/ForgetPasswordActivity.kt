@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -16,6 +17,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
 
     private lateinit var usernameInput: TextInputEditText
     private lateinit var submitButton: Button
+    private lateinit var backButton: ImageView
 
 
     @SuppressLint("MissingInflatedId")
@@ -26,6 +28,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
 
         usernameInput = findViewById(R.id.username_input)
         submitButton = findViewById(R.id.submit_button)
+        backButton = findViewById(R.id.back_arrow)
 
 
         submitButton.setOnClickListener{
@@ -55,7 +58,10 @@ class ForgetPasswordActivity : AppCompatActivity() {
             }
         }
 
-
+        backButton.setOnClickListener{
+            var intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+        }
 
     }
     private fun isValidEmail(email: String): Boolean {

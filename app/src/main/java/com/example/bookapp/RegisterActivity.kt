@@ -18,7 +18,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var passwordInput: TextInputEditText
     private lateinit var newPasswordInput: TextInputEditText
     private lateinit var registerButton: Button
-
+    private lateinit var signInButton:TextView
 
 
     @SuppressLint("MissingInflatedId")
@@ -31,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
         passwordInput = findViewById(R.id.password_input_register)
         newPasswordInput = findViewById(R.id.new_password_input_register)
         registerButton = findViewById(R.id.register_button)
+        signInButton = findViewById(R.id.sign_in)
 
         registerButton.setOnClickListener{
             val username = usernameInput.text.toString()
@@ -87,6 +88,11 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+
+        signInButton.setOnClickListener{
+            var intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
         }
 
 
